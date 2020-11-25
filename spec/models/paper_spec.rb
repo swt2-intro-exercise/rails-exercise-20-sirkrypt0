@@ -27,8 +27,13 @@ RSpec.describe Paper, type: :model do
     expect(paper).to_not be_valid
   end
 
+  it "should be valid with all values correct" do
+    paper = Paper.new title: 'Paper', venue: 'HPI', year: 2019
+    expect(paper).to be_valid
+  end
+
   it "should have an empty list of authors" do
-    paper = create(:paper)
+    paper = Paper.new title: 'Paper', venue: 'HPI', year: 2019
     expect(paper.authors).to eq []
   end
 
