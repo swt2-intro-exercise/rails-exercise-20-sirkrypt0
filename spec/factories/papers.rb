@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :paper do
-    title { "MyString" }
-    venue { "MyString" }
-    year { 1 }
+    title { "My Paper" }
+    venue { "HPI" }
+    year { 2019 }
   end
 end
