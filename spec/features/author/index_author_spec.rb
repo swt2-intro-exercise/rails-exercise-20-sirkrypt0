@@ -37,4 +37,18 @@ describe "Index author page", type: :feature do
     end
   end
 
+  it "should display a link to delete an author" do
+    visit authors_path
+    Author.all.each do |author|
+      expect(page).to have_link("Delete", href: author_path(author))
+    end
+  end
+
+  it "should delete an author when clicking the delete button" do
+    visit authors_path
+    before = Author.count
+    click_link 'Delete'
+    expect(Author.count). to eq before - 1
+  end
+
 end
