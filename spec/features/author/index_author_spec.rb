@@ -33,7 +33,7 @@ describe "Index author page", type: :feature do
   it "should display a table containing a link to edit an author" do
     visit authors_path
     Author.all.each do |author|
-      expect(page).to have_link("edit", href: edit_author_path(author))
+      expect(page).to have_link("Edit", href: edit_author_path(author))
     end
   end
 
