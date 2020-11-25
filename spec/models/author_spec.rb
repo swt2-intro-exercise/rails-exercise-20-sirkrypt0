@@ -24,7 +24,7 @@ describe "Author", type: :model do
 
   it "should fail the validation when creating an author without last name" do
     author = Author.new first_name: 'Alan', homepage: 'http://wikipedia.org/Alan_Turing'
-    expect(@author).to_not be_valid
+    expect(author).to_not be_valid
   end
 
 end
