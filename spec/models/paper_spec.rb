@@ -23,7 +23,7 @@ RSpec.describe Paper, type: :model do
   end
 
   it "should not be valid with year being not numeric" do
-    paper = Paper.new title: 'Paper', venue: 'HPI', year: '2019'
+    paper = Paper.new title: 'Paper', venue: 'HPI', year: 'Hello'
     expect(paper).to_not be_valid
   end
 
