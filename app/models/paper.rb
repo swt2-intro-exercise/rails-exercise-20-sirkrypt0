@@ -5,4 +5,8 @@ class Paper < ApplicationRecord
 
   has_and_belongs_to_many :authors
 
+  def self.published_in(year)
+    where("year = ?", year)
+  end
+
 end
